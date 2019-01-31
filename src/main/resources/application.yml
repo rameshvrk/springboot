@@ -1,0 +1,56 @@
+server:
+  address: localhost
+  port: 8085
+
+# data base configuration
+spring:
+  profiles:
+    active: "default"
+  application:
+    name: SCI
+  datasource:
+    url: jdbc:sqlserver://172.24.38.11:1433;databaseName=SCI_DB
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    username: sa
+    password: cybage@123
+    testWhileIdle: true
+    validationQuery: SELECT 1
+    minIdle: 10
+    maxActive: 70
+    maxWait: 10000
+    removeAbandoned: true
+    removeAbandonedTimeout: 120
+    logAbandoned: true
+    minEvictableIdleTimeMillis: 10000
+    autoreconnect: true
+    logvalidationerrors: true
+    closeMethod: close
+    useEquals: false
+  http:
+    multipart:
+      maxFileSize: 100MB
+      maxRequestSize: 100MB
+
+  jpa:
+    show-sql: true
+    properties:
+        hibernate.dialect: org.hibernate.dialect.SQLServer2012Dialect
+        hibernate.cache.region.factory_class: org.hibernate.cache.ehcache.EhCacheRegionFactory
+        hibernate.cache.use_second_level_cache: true
+        hibernate.cache.use_query_cache: true
+
+net.sf.ehcache.configurationResourceName: /sciehcache.xml
+CORS:
+  allowedOrigin: "*"
+
+#----FTP Details----
+sci:
+  ftp:
+    host: cybftp.cybage.com
+    user: cybage.com\venkataramanat
+    password: $panalpina1!
+    remoteDir: SCI_Portal\DEV\FTPDownloads
+    archiveDir: SCI_Portal\DEV\FTPDownloads\ARCHIVE
+    localDir: "D:\\PanalPina\\FTPDownloads\\"
+    localFailDir: "D:\\PanalPina\\xmldir\\"
+    localArchiveDirectory: "D:\\PanalPina\\FTPDownloads\\ARCHIVE\\"
