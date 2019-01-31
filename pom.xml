@@ -10,7 +10,7 @@
 	<packaging>war</packaging>
 
 	<name>springboot</name>
-	<description>springboot</description>
+	<description>springboot2</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
