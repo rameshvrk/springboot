@@ -17,7 +17,7 @@ import com.panalpina.sci.service.UserService;
  */
 
 @RestController
-@RequestMapping("/login")
+@RequestMapping("/loginController")
 public class LoginController {
 
 	@Autowired
