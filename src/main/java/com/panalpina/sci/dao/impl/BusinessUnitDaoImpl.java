@@ -31,7 +31,7 @@ public class BusinessUnitDaoImpl implements BusinessUnitDao {
 
 		@SuppressWarnings("unchecked")
 		List<BusinessUnit> businessUnitList = (List<BusinessUnit>) entityManager
-				.createQuery("SELECT b FROM BusinessUnit b WHERE b.businessUnitId = :businessUnitId")
+				.createQuery("SELECT b FROM BusinessUnit b WHERE b.business_Unit_ID = :businessUnitId")
 				.setParameter("businessUnitId", businessUnitId).getResultList();
 
 		if (!businessUnitList.isEmpty()) {
