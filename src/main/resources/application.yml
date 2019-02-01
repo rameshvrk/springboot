@@ -9,7 +9,7 @@ spring:
   application:
     name: SCI
   datasource:
-    url: jdbc:sqlserver://172.24.38.11:1433;databaseName=SCI_DB
+    url: jdbc:sqlserver://172.24.38.11;databaseName=SCI_DB
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
     username: sa
     password: cybage@123
